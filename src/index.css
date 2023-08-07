@@ -1,0 +1,29 @@
+:root {
+  --brand-color: #00DF5E;
+  --dark-10: #171717;
+  --dark-20: #212121;
+  --dark-30: #333333;
+  --dark-40: #828282;
+  --dark-50: #F9F9F9;
+  --message: #2962FF;
+  --success: #0BB07B;
+  --warning: #FFCE52;
+  --error: #F03D3D;
+  --information: #E0E0E0;
+  --branco: #ffffff;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+  background-color: var(--dark-10);
+}
