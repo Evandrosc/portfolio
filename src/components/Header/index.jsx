@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Navbar from './Navbar';
-import MenuIcon from './menuIcon';
+import MenuIcon from './MenuIcon';
 
 const HeaderContainer = styled.header`
   > div {
