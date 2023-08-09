@@ -434,7 +434,9 @@ const Main = () => {
       <Element name='sobre-mim'>
         <SectionSobreMim>
           <h2>Sobre mim</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+          <p>
+          Sou Evandro Marcos, um apaixonado desenvolvedor Front-End, com foco especializado em React. Minha expertise reside na criação de interfaces modernas e sofisticadas, que primam não somente pela estética, mas também pela performance otimizada, animações cativantes, adaptação responsiva e uma forte otimização para SEO. Estou comprometido em oferecer experiências digitais excepcionais, onde cada detalhe é cuidadosamente planejado para garantir a satisfação dos usuários e o sucesso dos projetos.
+          </p>
           <div>
             {sobreMim.map(informacao => (
               <div key={informacao.key}>
