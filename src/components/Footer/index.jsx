@@ -10,6 +10,10 @@ const Rodape = styled.footer`
 
     > a {
       color: var(--brand-color);
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 `
@@ -17,7 +21,7 @@ const Rodape = styled.footer`
 const Footer = () => {
   return (
     <Rodape>
-      <p>Orgulhosamente feito por <a href="https://www.linkedin.com/in/dev-evandro/" rel="noreferrer" target='_blank'>Evandro Marcos</a></p>
+      <p>Orgulhosamente feito por <a href="https://www.linkedin.com/in/dev-evandro/" rel="noreferrer" target='_blank'>Evandro</a></p>
     </Rodape>
   );
 };

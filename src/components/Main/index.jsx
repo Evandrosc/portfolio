@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import illustration from '../../assets/image/illustration.svg';
+import { Btn } from '../UI';
 import smile from '../../assets/image/smile.svg';
 import email from '../../assets/image/email.svg';
 import instagram from '../../assets/image/instagram.svg';
 import phone from '../../assets/image/phone.svg';
+import projetoProvedor from '../../../public/projetoProvedor.svg';
 import emDesenvolvimento from '../../assets/image/emDesenvolvimento.svg';
 import code from '../../assets/image/code.svg';
 import figma from '../../assets/image/figma.svg';
@@ -58,21 +60,28 @@ const Container = styled.div`
   }
 `
 
-const Btn = styled.a`
-  padding: .7rem 0;
-  width: 8.9375rem;
-  text-align: center;
-  font-size: .875rem;
-`
-
 const BtnCv = styled(Btn)`
   background-color: var(--brand-color);
   color: var(--dark-10);
+  width: 8.9375rem;
+  transition: .4s;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid var(--brand-color);
+    color: var(--branco);
+  }
 `
 
 const BtnContato = styled(Btn)`
   color: var(--dark-50);
-  border: 1px solid var(--dark-30);
+  border: 1px solid var(--dark-40);
+  width: 8.9375rem;
+  transition: .4s;
+
+  &:hover {
+    border-color: var(--brand-color);
+  }
 `
 
 const SectionSobreMim = styled.section`
@@ -145,7 +154,7 @@ const SectionProjetos = styled.section`
 
   > div {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
 
@@ -153,7 +162,6 @@ const SectionProjetos = styled.section`
       background-color: var(--dark-30);
       padding: 1.5rem;
       width: 26.8vw;
-      //min-width: 318.237px;
 
       @media screen and (max-width: 1143px) {
         width: 41vw;
@@ -171,13 +179,45 @@ const SectionProjetos = styled.section`
         color: var(--branco);
         font-size: 1.125rem;
         font-weight: var(--medium);
+        margin: 1rem 0 .4rem 0;
       }
 
       > h4 {
         color: var(--dark-40);
         font-size: .875rem;
+        margin-bottom: .7rem;
+      }
+
+      > div {
+        display: flex;
+        justify-content: space-between;
       }
     }
+  }
+`
+
+const BtnDeploy = styled(Btn)`
+  background-color: var(--brand-color);
+  color: var(--dark-10);
+  width: 45%;
+  transition: .3s;
+
+  &:hover {
+    background-color: transparent;
+    border: 1px solid var(--brand-color);
+    color: var(--branco);
+  }
+`
+
+const BtnRepositorio = styled(Btn)`
+  border: 1px solid var(--information);
+  color: var(--dark-50);
+  width: 45%;
+  transition: .3s;
+
+  &:hover {
+    border-color: var(--brand-color);
+    background-color: var(--dark-20);
   }
 `
 
@@ -221,7 +261,11 @@ const SectionServicos = styled.section`
 
       > h3 {
         color: var(--dark-40);
-        width: 6rem;
+        width: 5rem;
+
+        @media screen and (max-width: 450px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -256,7 +300,7 @@ const SectionSkills = styled.section`
       background-color: var(--dark-30);
       display: flex;
       justify-content: center;
-      align-items: center; // 5.4rem width
+      align-items: center;
 
       @media screen and (max-width: 690px) {
         width: 27vw;
@@ -303,39 +347,27 @@ const Main = () => {
   const projetos = [
     {
       key: 1,
-      img: `${emDesenvolvimento}`,
-      titulo: 'Em Desenvolvimento',
-      subTitulo: 'Em Desenvolvimento'
+      img: `${projetoProvedor}`,
+      titulo: 'Provedor de Internet',
+      tecnologias: 'React, CSS, HTML',
+      deploy: 'https://provedor-internet-eight.vercel.app/',
+      repositorio: 'https://github.com/Evandrosc/provedorInternet'
     },
     {
       key: 2,
       img: `${emDesenvolvimento}`,
       titulo: 'Em Desenvolvimento',
-      subTitulo: 'Em Desenvolvimento'
+      tecnologias: 'Em Desenvolvimento',
+      deploy: '',
+      repositorio: ''
     },
     {
       key: 3,
       img: `${emDesenvolvimento}`,
       titulo: 'Em Desenvolvimento',
-      subTitulo: 'Em Desenvolvimento'
-    },
-    {
-      key: 4,
-      img: `${emDesenvolvimento}`,
-      titulo: 'Em Desenvolvimento',
-      subTitulo: 'Em Desenvolvimento'
-    },
-    {
-      key: 5,
-      img: `${emDesenvolvimento}`,
-      titulo: 'Em Desenvolvimento',
-      subTitulo: 'Em Desenvolvimento'
-    },
-    {
-      key: 6,
-      img: `${emDesenvolvimento}`,
-      titulo: 'Em Desenvolvimento',
-      subTitulo: 'Em Desenvolvimento'
+      tecnologias: 'Em Desenvolvimento',
+      deploy: '',
+      repositorio: ''
     }
   ]
 
@@ -348,7 +380,7 @@ const Main = () => {
     {
       key: 2,
       img: `${figma}`,
-      titulo: 'UI Designer'
+      titulo: 'Web Ranqueamento'
     },
     {
       key: 3,
@@ -391,11 +423,11 @@ const Main = () => {
           <h1>Olá, eu sou o Evandro :)</h1>
           <p>Desenvolvedor Front-End</p>
           <div>
-            <BtnCv href="#">Download CV</BtnCv>
-            <BtnContato href="#">Entrar em contato</BtnContato>
+            <BtnCv href="#" rel="external">Download CV</BtnCv>
+            <BtnContato href="https://wa.me/5586998200728" target="_blank" rel="external">Entrar em contato</BtnContato>
           </div>
         </Container>
-        <img src={illustration} alt='avatar' />
+        <img src={illustration} alt="avatar" />
       </Section>
 
       <SectionSobreMim>
@@ -419,7 +451,11 @@ const Main = () => {
             <div key={projeto.key}>
               <img src={projeto.img} alt="imagem projeto" />
               <h3>{projeto.titulo}</h3>
-              <h4>{projeto.subTitulo}</h4>
+              <h4>Tecnologias: {projeto.tecnologias}</h4>
+              <div>
+                <BtnDeploy href={projeto.deploy} target="_blank" rel="external">Deploy</BtnDeploy>
+                <BtnRepositorio href={projeto.repositorio} target="_blank" rel="external">Repositório</BtnRepositorio>
+              </div>
             </div>
           ))}
         </div>

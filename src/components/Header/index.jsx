@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import MenuIcon from './MenuIcon';
 
 const HeaderContainer = styled.header`
+
   > div {
     display: flex;
     justify-content: space-between;
@@ -22,7 +23,7 @@ const HeaderContainer = styled.header`
       transition: .3s;
 
       &:hover {
-        color: var(--dark-40);
+        color: var(--brand-color);
       }
     }
   }
