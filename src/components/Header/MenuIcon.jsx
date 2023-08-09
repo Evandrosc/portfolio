@@ -33,8 +33,14 @@ const StyledMenuIcon = styled.div`
 `;
 
 const MenuIcon = ({ isActive, onClick }) => {
+
+  const handleClick = () => {
+    onClick();
+    // Revertendo o estado do ícone após o clique
+  };
+
   return (
-    <StyledMenuIcon $isActive={isActive} onClick={onClick}>
+    <StyledMenuIcon $isActive={isActive} onClick={handleClick}>
       <div />
       <div />
       <div />

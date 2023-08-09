@@ -5,7 +5,7 @@ import smile from '../../assets/image/smile.svg';
 import email from '../../assets/image/email.svg';
 import instagram from '../../assets/image/instagram.svg';
 import phone from '../../assets/image/phone.svg';
-import projetoProvedor from '../../../public/projetoProvedor.svg';
+import projetoProvedor from '../../assets/image/projetoProvedor.svg';
 import emDesenvolvimento from '../../assets/image/emDesenvolvimento.svg';
 import code from '../../assets/image/code.svg';
 import figma from '../../assets/image/figma.svg';
@@ -316,106 +316,106 @@ const SectionSkills = styled.section`
   }
 `
 
+const sobreMim = [
+  {
+    key: 1,
+    img: `${smile}`,
+    titulo: 'Meu Nome',
+    subTitulo: 'Evandro Marcos'
+  },
+  {
+    key: 2,
+    img: `${email}`,
+    titulo: 'E-mail',
+    subTitulo: 'evandromdsc@gmail.com'
+  },
+  {
+    key: 3,
+    img: `${instagram}`,
+    titulo: 'Instagram',
+    subTitulo: '@developer.evandro'
+  },
+  {
+    key: 4,
+    img: `${phone}`,
+    titulo: 'Telefone',
+    subTitulo: '(86) 99820-0728'
+  }
+]
+
+const projetos = [
+  {
+    key: 1,
+    img: `${projetoProvedor}`,
+    titulo: 'Provedor de Internet',
+    tecnologias: 'React, CSS, HTML',
+    deploy: 'https://provedor-internet-eight.vercel.app/',
+    repositorio: 'https://github.com/Evandrosc/provedorInternet'
+  },
+  {
+    key: 2,
+    img: `${emDesenvolvimento}`,
+    titulo: 'Em Desenvolvimento',
+    tecnologias: 'Em Desenvolvimento',
+    deploy: '',
+    repositorio: ''
+  },
+  {
+    key: 3,
+    img: `${emDesenvolvimento}`,
+    titulo: 'Em Desenvolvimento',
+    tecnologias: 'Em Desenvolvimento',
+    deploy: '',
+    repositorio: ''
+  }
+]
+
+const servicos = [
+  {
+    key: 1,
+    img: `${code}`,
+    titulo: 'Criação de sites'
+  },
+  {
+    key: 2,
+    img: `${figma}`,
+    titulo: 'Web Ranqueamento'
+  },
+  {
+    key: 3,
+    img: `${smartphone}`,
+    titulo: 'Sites responsivos'
+  }
+]
+
+const skills = [
+  {
+    key: 1,
+    img: `${html}`
+  },
+  {
+    key: 2,
+    img: `${css}`
+  },
+  {
+    key: 3,
+    img: `${javascript}`
+  },
+  {
+    key: 4,
+    img: `${tailwind}`
+  },
+  {
+    key: 5,
+    img: `${react}`
+  },
+  {
+    key: 6,
+    img: `${next}`
+  }
+]
+
 const Main = () => {
-
-  const sobreMim = [
-    {
-      key: 1,
-      img: `${smile}`,
-      titulo: 'Meu Nome',
-      subTitulo: 'Evandro Marcos'
-    },
-    {
-      key: 2,
-      img: `${email}`,
-      titulo: 'E-mail',
-      subTitulo: 'evandromdsc@gmail.com'
-    },
-    {
-      key: 3,
-      img: `${instagram}`,
-      titulo: 'Instagram',
-      subTitulo: '@developer.evandro'
-    },
-    {
-      key: 4,
-      img: `${phone}`,
-      titulo: 'Telefone',
-      subTitulo: '(86) 99820-0728'
-    }
-  ]
-
-  const projetos = [
-    {
-      key: 1,
-      img: `${projetoProvedor}`,
-      titulo: 'Provedor de Internet',
-      tecnologias: 'React, CSS, HTML',
-      deploy: 'https://provedor-internet-eight.vercel.app/',
-      repositorio: 'https://github.com/Evandrosc/provedorInternet'
-    },
-    {
-      key: 2,
-      img: `${emDesenvolvimento}`,
-      titulo: 'Em Desenvolvimento',
-      tecnologias: 'Em Desenvolvimento',
-      deploy: '',
-      repositorio: ''
-    },
-    {
-      key: 3,
-      img: `${emDesenvolvimento}`,
-      titulo: 'Em Desenvolvimento',
-      tecnologias: 'Em Desenvolvimento',
-      deploy: '',
-      repositorio: ''
-    }
-  ]
-
-  const servicos = [
-    {
-      key: 1,
-      img: `${code}`,
-      titulo: 'Criação de sites'
-    },
-    {
-      key: 2,
-      img: `${figma}`,
-      titulo: 'Web Ranqueamento'
-    },
-    {
-      key: 3,
-      img: `${smartphone}`,
-      titulo: 'Sites responsivos'
-    }
-  ]
-
-  const skills = [
-    {
-      key: 1,
-      img: `${html}`
-    },
-    {
-      key: 2,
-      img: `${css}`
-    },
-    {
-      key: 3,
-      img: `${javascript}`
-    },
-    {
-      key: 4,
-      img: `${tailwind}`
-    },
-    {
-      key: 5,
-      img: `${react}`
-    },
-    {
-      key: 6,
-      img: `${next}`
-    }
-  ]
 
   return (
     <>

@@ -6,7 +6,6 @@ const StyledNavbar = styled.nav`
   gap: 2rem;
   align-items: center;
   background-color: var(--dark-10);
-  padding: 1rem 2rem;
 
   ${props => props.$mobile && `
     position: absolute;
@@ -40,7 +39,7 @@ const NavLinks = [
   { id: 'skills', label: 'Minhas skills' },
 ];
 
-const Navbar = ({ mobile }) => {
+const Navbar = ({ mobile, onCloseMenu }) => {
   const mobileFont = mobile ? '2rem' : '1.125rem';
 
   return (
@@ -53,6 +52,7 @@ const Navbar = ({ mobile }) => {
           duration={500}
           offset={-50}
           $mobileFont={mobileFont}
+          onClick={onCloseMenu}
         >
           {navLink.label}
         </StyledLink>
