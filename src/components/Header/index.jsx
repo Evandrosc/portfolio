@@ -48,10 +48,10 @@ const Header = () => {
     <header>
       <Container>
         <h1>Portfólio</h1>
-        {shouldShowNavbar && <Navbar onCloseMenu={() => setIsMenuOpen(false)} />} {/* Passando a função onCloseMenu para o Navbar */}
+        {shouldShowNavbar && <Navbar onCloseMenu={() => setIsMenuOpen(false)} />}
         <MenuIcon isActive={isMenuOpen} onClick={toggleMenu} />
       </Container>
-      {shouldShowMobileNavbar && <Navbar mobile={isMenuOpen} onCloseMenu={() => setIsMenuOpen(false)} />} {/* Passando a função onCloseMenu para o Navbar */}
+      {shouldShowMobileNavbar && <Navbar mobile={isMenuOpen} onCloseMenu={() => setIsMenuOpen(false)} />}
     </header>
   );
 };

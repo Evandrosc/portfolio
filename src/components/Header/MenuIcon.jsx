@@ -36,7 +36,6 @@ const MenuIcon = ({ isActive, onClick }) => {
 
   const handleClick = () => {
     onClick();
-    // Revertendo o estado do ícone após o clique
   };
 
   return (
