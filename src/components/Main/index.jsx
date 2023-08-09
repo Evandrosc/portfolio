@@ -13,7 +13,7 @@ import smartphone from '../../assets/image/smartphone.svg';
 import html from '../../assets/image/html.svg';
 import css from '../../assets/image/css.svg';
 import javascript from '../../assets/image/javascript.svg';
-import tailwind from '../../assets/image/tailwind.svg';
+import styledComponents from '../../assets/image/styledComponents.svg';
 import react from '../../assets/image/react.svg';
 import next from '../../assets/image/next.svg';
 import { Element } from 'react-scroll';
@@ -24,7 +24,7 @@ const Section = styled.section`
   align-items: center;
 
   > img {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 830px) {
       display: none;
     }
   }
@@ -37,7 +37,7 @@ const Container = styled.div`
   gap: 1rem;
   margin: 6rem 0;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 830px) {
     width: 100%;
     align-items: center;
     margin: 4rem 0;
@@ -102,10 +102,10 @@ const SectionSobreMim = styled.section`
     color: var(--dark-40);
     font-weight: var(--regular);
     font-size: 1.125rem;
-    padding: 0 12vw;
+    padding: 0 14%;
     line-height: 2rem;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 830px) {
       padding: 0;
     }
   }
@@ -157,19 +157,19 @@ const SectionProjetos = styled.section`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2vw;
 
     > div {
       background-color: var(--dark-30);
       padding: 1.5rem;
-      width: 26.8vw;
+      width: 23.6vw;
 
-      @media screen and (max-width: 1143px) {
-        width: 41vw;
+      @media screen and (max-width: 1100px) {
+        width: 36.1vw;
       }
 
-      @media screen and (max-width: 799px) {
-        width: 100vw;
+      @media screen and (max-width: 768px) {
+        width: 100%;
       }
 
       > img {
@@ -234,31 +234,23 @@ const SectionServicos = styled.section`
 
   > div {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-
-    @media screen and (max-width: 650px) {
-      justify-content: center;
-      gap: 1rem;
-    }
+    gap: 2vw;
 
     > div {
       background-color: var(--dark-30);
       border-bottom: 3px solid var(--brand-color);
-      width: 26.8vw;
+      width: 23.6vw;
       padding: 1rem 0 1rem 1rem;
       display: flex;
       flex-direction: column;
       align-items: baseline;
       gap: 2rem;
 
-      @media screen and (max-width: 650px) {
-        width: 40vw;
+      @media screen and (max-width: 900px) {
+        width: 100%;
       }
-
-      @media screen and (max-width: 450px) {
-      width: 100%;
-    }
 
       > h3 {
         color: var(--dark-40);
@@ -286,26 +278,30 @@ const SectionSkills = styled.section`
   > div {
     
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-
-    @media screen and (max-width: 690px) {
-      gap: .5rem 0;
-    }
+    gap: 3.9vw;
 
     > div {
-      width: 9.375vw;
-      max-width: 150px;
-      height: 9.375vw;
-      max-height: 150px;
+      width: 9.2vw;
+      height: 9.2vw;
       background-color: var(--dark-30);
       display: flex;
       justify-content: center;
       align-items: center;
 
-      @media screen and (max-width: 690px) {
-        width: 27vw;
-        height: 27vw;
+      @media screen and (max-width: 900px) {
+        width: 22.7vw;
+        height: 22.7vw;
+      }
+      @media screen and (max-width: 768px) {
+        width: 36vw;
+        height: 36vw;
+      }
+
+      @media screen and (max-width: 480px) {
+        width: 26vw;
+        height: 26vw;
       }
 
       > img {
@@ -356,17 +352,17 @@ const projetos = [
     key: 2,
     img: `${emDesenvolvimento}`,
     titulo: 'Em Desenvolvimento',
-    tecnologias: 'Em Desenvolvimento',
-    deploy: '',
-    repositorio: ''
+    tecnologias: 'Desenvolvimento',
+    deploy: '#',
+    repositorio: '#'
   },
   {
     key: 3,
     img: `${emDesenvolvimento}`,
     titulo: 'Em Desenvolvimento',
-    tecnologias: 'Em Desenvolvimento',
-    deploy: '',
-    repositorio: ''
+    tecnologias: 'Desenvolvimento',
+    deploy: '#',
+    repositorio: '#'
   }
 ]
 
@@ -403,7 +399,7 @@ const skills = [
   },
   {
     key: 4,
-    img: `${tailwind}`
+    img: `${styledComponents}`
   },
   {
     key: 5,

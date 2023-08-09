@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const Rodape = styled.footer`
   background-color: var(--dark-20);
   padding: 1rem;
+  max-width: 1680px;
 
   > p {
     text-align: center;
