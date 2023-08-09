@@ -3,31 +3,24 @@ import styled from 'styled-components';
 import Navbar from './Navbar';
 import MenuIcon from './MenuIcon';
 
-const HeaderContainer = styled.header`
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
 
-  > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2rem 0;
-
-    @media screen and (max-width: 768px) {
-      margin-bottom: 0;
-    }
-
-    > h1 {
-      color: var(--dark-50);
-      font-size: 1.625rem;
-      font-weight: var(--bold);
-      cursor: pointer;
-      transition: .3s;
-
-      &:hover {
-        color: var(--brand-color);
-      }
-    }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 0;
   }
-`;
+
+  > h1 {
+    color: var(--dark-50);
+    font-size: 1.625rem;
+    font-weight: var(--bold);
+    cursor: pointer;
+    transition: .3s;
+  }
+`
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,14 +45,14 @@ const Header = () => {
   const shouldShowMobileNavbar = isMenuOpen && windowWidth <= 768;
 
   return (
-    <HeaderContainer>
-      <div>
+    <header>
+      <Container>
         <h1>Portfólio</h1>
         {shouldShowNavbar && <Navbar />}
         <MenuIcon isActive={isMenuOpen} onClick={toggleMenu} />
-      </div>
+      </Container>
       {shouldShowMobileNavbar && <Navbar mobile={isMenuOpen} />}
-    </HeaderContainer>
+    </header>
   );
 };
 

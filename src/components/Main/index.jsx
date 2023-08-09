@@ -16,6 +16,7 @@ import javascript from '../../assets/image/javascript.svg';
 import tailwind from '../../assets/image/tailwind.svg';
 import react from '../../assets/image/react.svg';
 import next from '../../assets/image/next.svg';
+import { Element } from 'react-scroll';
 
 const Section = styled.section`
   display: flex;
@@ -427,60 +428,70 @@ const Main = () => {
             <BtnContato href="https://wa.me/5586998200728" target="_blank" rel="external">Entrar em contato</BtnContato>
           </div>
         </Container>
-        <img src={illustration} alt="avatar" />
+        <img src={illustration} alt='avatar' />
       </Section>
 
-      <SectionSobreMim>
-        <h2>Sobre mim</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
-        <div>
-          {sobreMim.map(informacao => (
-            <div key={informacao.key}>
-              <img src={informacao.img} alt='ícone' />
-              <h3>{informacao.titulo}</h3>
-              <h4>{informacao.subTitulo}</h4>
-            </div>
-          ))}
-        </div>
-      </SectionSobreMim>
-
-      <SectionProjetos>
-        <h2>Projetos</h2>
-        <div>
-          {projetos.map(projeto => (
-            <div key={projeto.key}>
-              <img src={projeto.img} alt="imagem projeto" />
-              <h3>{projeto.titulo}</h3>
-              <h4>Tecnologias: {projeto.tecnologias}</h4>
-              <div>
-                <BtnDeploy href={projeto.deploy} target="_blank" rel="external">Deploy</BtnDeploy>
-                <BtnRepositorio href={projeto.repositorio} target="_blank" rel="external">Repositório</BtnRepositorio>
+      <Element name='sobre-mim'>
+        <SectionSobreMim>
+          <h2>Sobre mim</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+          <div>
+            {sobreMim.map(informacao => (
+              <div key={informacao.key}>
+                <img src={informacao.img} alt='ícone' />
+                <h3>{informacao.titulo}</h3>
+                <h4>{informacao.subTitulo}</h4>
               </div>
-            </div>
-          ))}
-        </div>
-      </SectionProjetos>
-      <SectionServicos>
-        <h2>Serviços</h2>
-        <div>
-          {servicos.map(servico => (
-            <div key={servico.key}>
-              <img src={servico.img} alt="ícone" />
-              <h3>{servico.titulo}</h3>
-            </div>
-          ))}
-        </div>
-      </SectionServicos>
-      <SectionSkills>
-        <h2>Minhas skills</h2>
-        <div>
-          {skills.map(skill => (
-            <div key={skill.key}>
-              <img src={skill.img} alt="icone" />
-            </div>
-          ))}
-        </div>
-      </SectionSkills>
+            ))}
+          </div>
+        </SectionSobreMim>
+      </Element>
+
+      <Element name='projetos'>
+        <SectionProjetos>
+          <h2>Projetos</h2>
+          <div>
+            {projetos.map(projeto => (
+              <div key={projeto.key}>
+                <img src={projeto.img} alt="imagem projeto" />
+                <h3>{projeto.titulo}</h3>
+                <h4>Tecnologias: {projeto.tecnologias}</h4>
+                <div>
+                  <BtnDeploy href={projeto.deploy} target="_blank" rel="external">Deploy</BtnDeploy>
+                  <BtnRepositorio href={projeto.repositorio} target="_blank" rel="external">Repositório</BtnRepositorio>
+                </div>
+              </div>
+            ))}
+          </div>
+        </SectionProjetos>
+      </Element>
+
+      <Element name='servicos'>
+        <SectionServicos>
+          <h2>Serviços</h2>
+          <div>
+            {servicos.map(servico => (
+              <div key={servico.key}>
+                <img src={servico.img} alt="ícone" />
+                <h3>{servico.titulo}</h3>
+              </div>
+            ))}
+          </div>
+        </SectionServicos>
+      </Element>
+
+      <Element name='skills'>
+        <SectionSkills>
+          <h2>Minhas skills</h2>
+          <div>
+            {skills.map(skill => (
+              <div key={skill.key}>
+                <img src={skill.img} alt="icone" />
+              </div>
+            ))}
+          </div>
+        </SectionSkills>
+      </Element>
     </>
   );
 };

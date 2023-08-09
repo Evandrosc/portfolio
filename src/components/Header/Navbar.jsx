@@ -1,48 +1,62 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 const StyledNavbar = styled.nav`
-  position: ${props => props.$mobile ? 'absolute' : ''};
-  top: ${props => props.$mobile ? '50%' : ''};
-  left: ${props => props.$mobile ? '50%' : ''};
-  transform: ${props => props.$mobile ? 'translate(-50%, -50%)' : ''};
-
-  clip-path: ${props => props.$mobile ? 'polygon(0 14%, 100% 14%, 100% 100%, 0% 100%)' : ''};
-  
-  width: ${props => props.$mobile ? '100vw' : ''};
-  height: ${props => props.$mobile ? '100vh' : ''};
-
   display: flex;
   gap: 2rem;
-  flex-direction: ${props => props.$mobile ? 'column' : 'row'};
-  align-items: ${props => props.$mobile ? 'center' : ''};
-  justify-content: ${props => props.$mobile ? 'center' : ''};
-
+  align-items: center;
   background-color: var(--dark-10);
+  padding: 1rem 2rem;
 
-  > a {
-    color: var(--dark-50);
-    font-weight: var(--regular);
-    width: ${props => props.$mobile ? '100%' : ''};
-    font-size: ${props => props.$mobile ? '2rem' : '1.125rem'};
-    text-align: ${props => props.$mobile ? 'center' : ''};
-    transition: .3s;
+  ${props => props.$mobile && `
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(0 14%, 100% 14%, 100% 100%, 0% 100%);
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+  `}
+`;
 
-    &:hover {
-      color: var(--brand-color);
-    }
+const StyledLink = styled(Link)`
+  color: var(--dark-50);
+  font-weight: var(--regular);
+  font-size: ${props => props.$mobileFont};
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    color: var(--brand-color);
   }
 `;
 
-
+const NavLinks = [
+  { id: 'sobre-mim', label: 'Sobre mim' },
+  { id: 'projetos', label: 'Projetos' },
+  { id: 'servicos', label: 'Serviços' },
+  { id: 'skills', label: 'Minhas skills' },
+];
 
 const Navbar = ({ mobile }) => {
+  const mobileFont = mobile ? '2rem' : '1.125rem';
 
   return (
     <StyledNavbar $mobile={mobile}>
-      <a href="#">Sobre mim</a>
-      <a href="#">Projetos</a>
-      <a href="#">Serviços</a>
-      <a href="#">Minhas skills</a>
+      {NavLinks.map(navLink => (
+        <StyledLink
+          key={navLink.id}
+          to={navLink.id}
+          smooth={true}
+          duration={500}
+          offset={-50}
+          $mobileFont={mobileFont}
+        >
+          {navLink.label}
+        </StyledLink>
+      ))}
     </StyledNavbar>
   );
 };
