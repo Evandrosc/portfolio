@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import illustration from '../../assets/image/illustration.svg';
 import { Btn } from '../UI';
+import curriculo from '../../assets/curriculo.pdf';
 import smile from '../../assets/image/smile.svg';
 import email from '../../assets/image/email.svg';
 import instagram from '../../assets/image/instagram.svg';
@@ -420,7 +421,7 @@ const Main = () => {
           <h1>Olá, eu sou o Evandro :)</h1>
           <p>Desenvolvedor Front-End</p>
           <div>
-            <BtnCv href="#" rel="external">Download CV</BtnCv>
+            <BtnCv href={curriculo} target="_blank" rel="external">Download CV</BtnCv>
             <BtnContato href="https://wa.me/5586998200728" target="_blank" rel="external">Entrar em contato</BtnContato>
           </div>
         </Container>
