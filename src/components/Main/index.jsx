@@ -421,7 +421,7 @@ const Main = () => {
           <h1>Olá, eu sou o Evandro :)</h1>
           <p>Desenvolvedor Front-End</p>
           <div>
-            <BtnCv href={curriculo} rel="external">Download CV</BtnCv>
+            <BtnCv href={curriculo} target="_blank" rel="nofollow download">Download CV</BtnCv>
             <BtnContato href="https://wa.me/5586998200728" target="_blank" rel="external">Entrar em contato</BtnContato>
           </div>
         </Container>
