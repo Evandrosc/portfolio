@@ -287,31 +287,36 @@ const SectionSkills = styled.section`
     flex-wrap: wrap;
     gap: 3.9vw;
 
-    > div {
-      width: 9.2vw;
-      height: 9.2vw;
+    > figure {
+      width: 12.3%;
+      padding: 1rem .5rem;
       background-color: var(--dark-30);
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
 
-      @media screen and (max-width: 900px) {
-        width: 22.7vw;
-        height: 22.7vw;
+      @media screen and (max-width: 1280px) {
+        width: 21.1%;
       }
-      @media screen and (max-width: 768px) {
-        width: 36vw;
-        height: 36vw;
+
+      @media screen and (max-width: 1024px) {
+        width: 29.9%;
       }
 
       @media screen and (max-width: 480px) {
-        width: 26vw;
-        height: 26vw;
+        width: 47.4%;
+        /* height: 22.7vw; */
       }
 
       > img {
         width: 60%;
         height: 60%;
+      }
+
+      > figcaption {
+        color: var(--dark-50);
+        text-align: center;
       }
     }
   }
@@ -349,7 +354,7 @@ const projetos = [
     key: 1,
     img: `${mundoNerdNaped}`,
     titulo: 'Mundo Nerd Naped',
-    tecnologias: 'React, Styled-components, TanStack Query, TypeScript',
+    tecnologias: 'React, Styled components, TanStack Query, TypeScript',
     deploy: 'https://mundo-nerd-naped.vercel.app/',
     repositorio: 'https://github.com/Evandrosc/mundo-nerd-naped'
   },
@@ -392,27 +397,33 @@ const servicos = [
 const skills = [
   {
     key: 1,
-    img: `${html}`
+    img: `${html}`,
+    nome: 'HTML'
   },
   {
     key: 2,
-    img: `${css}`
+    img: `${css}`,
+    nome: 'CSS'
   },
   {
     key: 3,
-    img: `${javascript}`
+    img: `${javascript}`,
+    nome: 'javascript'
   },
   {
     key: 4,
-    img: `${styledComponents}`
+    img: `${styledComponents}`,
+    nome: 'Styled components'
   },
   {
     key: 5,
-    img: `${react}`
+    img: `${react}`,
+    nome: 'React'
   },
   {
     key: 6,
-    img: `${next}`
+    img: `${next}`,
+    nome: 'Next'
   }
 ]
 
@@ -429,7 +440,7 @@ const Main = () => {
             <BtnContato href="https://wa.me/5586998200728" target="_blank" rel="external">Entrar em contato</BtnContato>
           </div>
         </Container>
-        <img src={illustration} alt='avatar' />
+        <img src={illustration} alt='' />
       </Section>
 
       <Element name='sobre-mim'>
@@ -441,7 +452,7 @@ const Main = () => {
           <div>
             {sobreMim.map(informacao => (
               <div key={informacao.key}>
-                <img src={informacao.img} alt='ícone' />
+                <img src={informacao.img} alt='' />
                 <h3>{informacao.titulo}</h3>
                 <h4>{informacao.subTitulo}</h4>
               </div>
@@ -456,7 +467,7 @@ const Main = () => {
           <div>
             {projetos.map(projeto => (
               <div key={projeto.key}>
-                <img src={projeto.img} alt="imagem projeto" />
+                <img src={projeto.img} alt='' />
                 <h3>{projeto.titulo}</h3>
                 <h4>Tecnologias: {projeto.tecnologias}</h4>
                 <div>
@@ -475,7 +486,7 @@ const Main = () => {
           <div>
             {servicos.map(servico => (
               <div key={servico.key}>
-                <img src={servico.img} alt="ícone" />
+                <img src={servico.img} alt='' />
                 <h3>{servico.titulo}</h3>
               </div>
             ))}
@@ -488,9 +499,10 @@ const Main = () => {
           <h2>Minhas skills</h2>
           <div>
             {skills.map(skill => (
-              <div key={skill.key}>
-                <img src={skill.img} alt="icone" />
-              </div>
+              <figure key={skill.key}>
+                <img src={skill.img} alt='' />
+                <figcaption>{skill.nome}</figcaption>
+              </figure>
             ))}
           </div>
         </SectionSkills>
