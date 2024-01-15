@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import illustration from '../../assets/image/illustration.svg';
 import { Btn } from '../UI';
-import curriculo from '../../assets/curriculo.pdf';
+import curriculo from '../../../public/curriculo.pdf'
 import smile from '../../assets/image/smile.svg';
 import email from '../../assets/image/email.svg';
 import instagram from '../../assets/image/instagram.svg';
 import phone from '../../assets/image/phone.svg';
-import projetoProvedor from '../../assets/image/projetoProvedor.svg';
-import emDesenvolvimento from '../../assets/image/emDesenvolvimento.svg';
+import mundoNerdNaped from '../../../public/image/mundoNerdNaped.webp';
+import projetoProvedor from '../../../public/image/projetoProvedor.webp';
+import foodJP from '../../../public/image/foodJP.webp';
 import code from '../../assets/image/code.svg';
 import figma from '../../assets/image/figma.svg';
 import smartphone from '../../assets/image/smartphone.svg';
@@ -161,6 +162,9 @@ const SectionProjetos = styled.section`
     gap: 2vw;
 
     > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       background-color: var(--dark-30);
       padding: 1.5rem;
       width: 23.6vw;
@@ -343,6 +347,14 @@ const sobreMim = [
 const projetos = [
   {
     key: 1,
+    img: `${mundoNerdNaped}`,
+    titulo: 'Mundo nerd Naped',
+    tecnologias: 'React, Styled-components, TanStack Query, TypeScript',
+    deploy: 'https://mundo-nerd-naped.vercel.app/',
+    repositorio: 'https://github.com/Evandrosc/mundo-nerd-naped'
+  },
+  {
+    key: 2,
     img: `${projetoProvedor}`,
     titulo: 'Provedor de Internet',
     tecnologias: 'React, CSS, HTML',
@@ -350,20 +362,12 @@ const projetos = [
     repositorio: 'https://github.com/Evandrosc/provedorInternet'
   },
   {
-    key: 2,
-    img: `${emDesenvolvimento}`,
-    titulo: 'Em Desenvolvimento',
-    tecnologias: 'Desenvolvimento',
-    deploy: '#',
-    repositorio: '#'
-  },
-  {
     key: 3,
-    img: `${emDesenvolvimento}`,
-    titulo: 'Em Desenvolvimento',
-    tecnologias: 'Desenvolvimento',
-    deploy: '#',
-    repositorio: '#'
+    img: `${foodJP}`,
+    titulo: 'FoodJP',
+    tecnologias: 'React, TypeScript, Tailwind',
+    deploy: 'https://food-jp-jet.vercel.app/',
+    repositorio: 'https://github.com/Evandrosc/FoodJP'
   }
 ]
 
