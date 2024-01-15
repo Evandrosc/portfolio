@@ -348,7 +348,7 @@ const projetos = [
   {
     key: 1,
     img: `${mundoNerdNaped}`,
-    titulo: 'Mundo nerd Naped',
+    titulo: 'Mundo Nerd Naped',
     tecnologias: 'React, Styled-components, TanStack Query, TypeScript',
     deploy: 'https://mundo-nerd-naped.vercel.app/',
     repositorio: 'https://github.com/Evandrosc/mundo-nerd-naped'
