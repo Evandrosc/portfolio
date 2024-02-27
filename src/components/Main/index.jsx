@@ -145,6 +145,7 @@ const SectionSobreMim = styled.section`
 `
 
 const SectionProjetos = styled.section`
+  margin: 3rem 0;
 
   > h2 {
     color: var(--dark-50);
