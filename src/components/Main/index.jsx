@@ -91,6 +91,7 @@ const SectionSobreMim = styled.section`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin: 7rem 0;
 
   > h2 {
     text-align: center;
@@ -144,8 +145,6 @@ const SectionSobreMim = styled.section`
 `
 
 const SectionProjetos = styled.section`
-
-  margin: 7rem 0;
 
   > h2 {
     color: var(--dark-50);
@@ -443,24 +442,6 @@ const Main = () => {
         <img src={illustration} alt='' />
       </Section>
 
-      <Element name='sobre-mim'>
-        <SectionSobreMim>
-          <h2>Sobre mim</h2>
-          <p>
-          Sou Evandro Marcos, um apaixonado desenvolvedor Front-End, com foco especializado em React. Minha expertise reside na criação de interfaces modernas e sofisticadas, que primam não somente pela estética, mas também pela performance otimizada, animações cativantes, adaptação responsiva e uma forte otimização para SEO. Estou comprometido em oferecer experiências digitais excepcionais, onde cada detalhe é cuidadosamente planejado para garantir a satisfação dos usuários e o sucesso dos projetos.
-          </p>
-          <div>
-            {sobreMim.map(informacao => (
-              <div key={informacao.key}>
-                <img src={informacao.img} alt='' />
-                <h3>{informacao.titulo}</h3>
-                <h4>{informacao.subTitulo}</h4>
-              </div>
-            ))}
-          </div>
-        </SectionSobreMim>
-      </Element>
-
       <Element name='projetos'>
         <SectionProjetos>
           <h2>Projetos</h2>
@@ -478,6 +459,24 @@ const Main = () => {
             ))}
           </div>
         </SectionProjetos>
+      </Element>
+
+      <Element name='sobre-mim'>
+        <SectionSobreMim>
+          <h2>Sobre mim</h2>
+          <p>
+            Atuo desde 2022 como desenvolvedor desempenhando as melhores práticas para entregar a melhor experiência aos usuários. Cursando 4º período em Análise e Desenvolvimento de Sistemas. Além disso um amante de tecnologia :)
+          </p>
+          <div>
+            {sobreMim.map(informacao => (
+              <div key={informacao.key}>
+                <img src={informacao.img} alt='' />
+                <h3>{informacao.titulo}</h3>
+                <h4>{informacao.subTitulo}</h4>
+              </div>
+            ))}
+          </div>
+        </SectionSobreMim>
       </Element>
 
       <Element name='servicos'>

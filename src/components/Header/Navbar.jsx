@@ -33,8 +33,8 @@ const StyledLink = styled(Link)`
 `;
 
 const NavLinks = [
-  { id: 'sobre-mim', label: 'Sobre mim' },
   { id: 'projetos', label: 'Projetos' },
+  { id: 'sobre-mim', label: 'Sobre mim' },
   { id: 'servicos', label: 'Serviços' },
   { id: 'skills', label: 'Minhas skills' },
 ];
