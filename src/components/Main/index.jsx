@@ -362,9 +362,9 @@ const projetos = [
     key: 2,
     img: `${projetoProvedor}`,
     titulo: 'Provedor de Internet',
-    tecnologias: 'React, CSS, HTML',
+    tecnologias: 'React, Styled components',
     deploy: 'https://provedor-internet-eight.vercel.app/',
-    repositorio: 'https://github.com/Evandrosc/provedorInternet'
+    repositorio: 'https://github.com/Evandrosc/provedor-Internet/'
   },
   {
     key: 3,
