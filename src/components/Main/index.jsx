@@ -339,7 +339,7 @@ const sobreMim = [
     key: 3,
     img: `${instagram}`,
     titulo: 'Instagram',
-    subTitulo: '@developer.evandro'
+    subTitulo: '@evandro.tech'
   },
   {
     key: 4,
